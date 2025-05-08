@@ -149,7 +149,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 # Assuming 'logreg' and 'X_test' are already defined from your previous code...
 
 # Generate predictions first
-y_pred = logreg.predict(X_test)
+y_pred = model.predict(X_test)
 
 # Accuracy
 print("Accuracy:", accuracy_score(y_test, y_pred))
@@ -221,4 +221,4 @@ logreg = LogisticRegression(max_iter=1000)
 logreg.fit(X_train, y_train)
 
 import joblib
-joblib.dump(logreg, 'churn_logreg_model.pkl')
+model = joblib.dump(logreg, 'churn_logreg_model.pkl')
