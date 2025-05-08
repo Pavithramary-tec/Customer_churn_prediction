@@ -185,7 +185,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 
 # Load your data
-df = pd.read_csv('/content/Churn_Modelling_dataset.csv')
+df = pd.read_csv('Churn_Modelling_dataset.csv')
 
 # Fill missing values for all columns (numeric and categorical)
 for col in df.columns:
