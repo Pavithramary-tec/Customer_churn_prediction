@@ -221,4 +221,6 @@ logreg = LogisticRegression(max_iter=1000)
 logreg.fit(X_train, y_train)
 
 import joblib
-model = joblib.dump(logreg, 'churn_logreg_model.pkl')
+model = joblib.load(logreg, 'churn_logreg_model.pkl')
+joblib.dump(logreg, 'churn_logreg_model.pkl')
+
