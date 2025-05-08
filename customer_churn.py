@@ -148,8 +148,8 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 
 # Assuming 'logreg' and 'X_test' are already defined from your previous code...
 import joblib
-model = joblib.load(logreg, 'churn_logreg_model.pkl')
-joblib.dump(logreg, 'churn_logreg_model.pkl')
+model = joblib.load('churn_logreg_model.pkl')
+
 # Generate predictions first
 y_pred = model.predict(X_test)
 
