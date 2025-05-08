@@ -20,14 +20,14 @@ from sklearn.metrics import classification_report, confusion_matrix, accuracy_sc
 import pandas as pd
 
 # Load your dataset
-df = pd.read_csv('/content/Churn_Modelling_dataset.csv')  # Replace with your filename
+df = pd.read_csv('Churn_Modelling_dataset.csv')  # Replace with your filename
 print(df.shape)
 df.head()
 
 import pandas as pd
 
 # Load your data
-df = pd.read_csv('/content/Churn_Modelling_dataset.csv')
+df = pd.read_csv('Churn_Modelling_dataset.csv')
 
 # Rename 'exited' to 'Churn' for clarity
 df.rename(columns={'exited': 'Churn'}, inplace=True)
@@ -60,7 +60,7 @@ df[numerical_cols] = scaler.fit_transform(df[numerical_cols])
 import pandas as pd
 
 # Load your data
-df = pd.read_csv('/content/Churn_Modelling_dataset.csv')
+df = pd.read_csv('Churn_Modelling_dataset.csv')
 
 # Fill missing categorical values with the most frequent value (mode)
 df['Geography'].fillna(df['Geography'].mode()[0], inplace=True)
@@ -126,7 +126,7 @@ print(df.head())
 import pandas as pd
 
 # Load your data
-df = pd.read_csv('/content/Churn_Modelling_dataset.csv')
+df = pd.read_csv('Churn_Modelling_dataset.csv')
 
 # Fill missing values for specified columns
 df['Geography'].fillna(df['Geography'].mode()[0], inplace=True)
