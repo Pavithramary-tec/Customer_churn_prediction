@@ -151,6 +151,7 @@ import joblib
 model = joblib.load('churn_logreg_model.pkl')
 
 # Generate predictions first
+y_pred = logreg.predict(X_test)
 y_pred = model.predict(X_test)
 
 # Accuracy
