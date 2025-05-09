@@ -222,7 +222,29 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 logreg = LogisticRegression(max_iter=1000)
 logreg.fit(X_train, y_train)
 
+import pandas as pd
 import joblib
-model = joblib.load(logreg, 'churn_logreg_model.pkl')
-joblib.dump(logreg, 'churn_logreg_model.pkl')
+
+# Load the trained model
+model = joblib.load('churn_logreg_model.pkl')
+
+# Example: Function to preprocess user input (must match training preprocessing)
+def preprocess_input(user_input_dict):
+    # Convert dict to DataFrame, encode, scale, etc. as in training
+    # For demo, let's assume it's already a DataFrame with correct columns
+    return pd.DataFrame([user_input_dict])
+
+# Example: Predict function
+def predict_churn(user_input_dict):
+    input_df = preprocess_input(user_input_dict)
+    prediction = model.predict(input_df)
+    return prediction[0]
+
+# For Streamlit, you could use:
+# import streamlit as st
+# user_input = {...}  # Collect from st.number_input, st.selectbox, etc.
+# if st.button("Predict"):
+#     result = predict_churn(user_input)
+#     st.write(f"Prediction: {result}")
+
 
