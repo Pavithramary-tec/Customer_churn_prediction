@@ -23,4 +23,6 @@ regex==2024.4.16
 seaborn==0.13.2
 six==1.16.0
 tqdm==4.66.2
+sklearn
+streamlit
 tzdata==2024.1
